@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove=".gitattributes" />
+    <None Remove=".gitignore" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Uaine.Objects" Version="1.0.0" />
     <PackageReference Include="Uaine.Platforms" Version="1.0.3" />
   </ItemGroup>
