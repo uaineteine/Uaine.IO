@@ -28,10 +28,21 @@ namespace Uaine.IO
             {
                 if (values[i].Name==n)
                 {
-                    return values[i];
+                    return values[i].Value;
                 }
             }
             return null;
+        }
+
+        public void UpdateByName(string n, object value)
+        {
+            for (int i = 0; i < values.Count; i++)
+            {
+                if (values[i].Name == n)
+                {
+                    values[i].Value = value;
+                }
+            }
         }
 
         public void SaveFile()
@@ -61,7 +72,7 @@ namespace Uaine.IO
                     {
                         for (int i = 0; i < values.Count; i++)
                         {
-                            values[i].LoadValue(br);
+                            values[i].ParseFromString(br.ReadLine());
                         }
                         //EOF
                         br.Close();

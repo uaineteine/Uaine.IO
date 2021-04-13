@@ -27,11 +27,10 @@ namespace Uaine.IO
             _def = val;
         }
 
-        internal void LoadValue(StreamReader sr)
+        internal void ParseFromString(string s)
         {
             try
             {
-                string s = sr.ReadLine();
                 if (type == typeof(string))
                 {
                     Value = s;
@@ -52,6 +51,8 @@ namespace Uaine.IO
                 {
                     Value = Convert.ToDecimal(s);
                 }
+                else
+                    Value = _def;
             }
             catch
             {
