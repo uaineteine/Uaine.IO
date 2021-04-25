@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿using System.IO;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Uaine.IO
 {
@@ -31,6 +27,11 @@ namespace Uaine.IO
                 sb.Append("/n");
             }
             return sb.ToString();
+        }
+
+        public void SaveAllLines()
+        {
+            File.WriteAllLines(Filename, Lines);
         }
     }
 }
