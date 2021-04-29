@@ -1,27 +1,20 @@
 ﻿using System;
-using Uaine.Objects.Primitives;
+using Uaine.Objects.Primitives.Values;
 
 namespace Uaine.IO
 {
-    public class SettingValue : NamedObject
+    public class SettingValue : OValue
     {
-        public Type type { get; set; }
-        public object Value;
-        private object _def;
-        public object def { get => _def; }
-
-        public SettingValue(string name, Type t, object val) : base(name)
+        private string _name;
+        public string Name { get => _name; }
+        public SettingValue(string name, Type t, object val) : base(t, val)
         {
-            type = t;
-            Value = val;
-            _def = val;
+            _name = Name;
         }
 
-        public SettingValue(string name, object val):base(name)
+        public SettingValue(string name, object val) : base(val)
         {
-            Value = val;
-            type = val.GetType();
-            _def = val;
+            _name = Name;
         }
 
         internal void ParseFromString(string s)
