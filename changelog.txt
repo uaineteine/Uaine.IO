@@ -1,4 +1,6 @@
---0.1.1--
+--0.1.1.1--
 FileData can write all lines now
 Updated Uaine.Objects to 1.2
 --SettingValue inherits from OValue in Uaine.Objects
+Fixes:
+--SettingValue name

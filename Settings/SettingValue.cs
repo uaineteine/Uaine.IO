@@ -5,16 +5,16 @@ namespace Uaine.IO
 {
     public class SettingValue : OValue
     {
-        private string _name;
+        protected string _name;
         public string Name { get => _name; }
         public SettingValue(string name, Type t, object val) : base(t, val)
         {
-            _name = Name;
+            _name = name;
         }
 
         public SettingValue(string name, object val) : base(val)
         {
-            _name = Name;
+            _name = name;
         }
 
         internal void ParseFromString(string s)
