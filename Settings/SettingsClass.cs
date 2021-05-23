@@ -11,7 +11,7 @@ namespace Uaine.IO
         {
         }
 
-        List<SettingValue> values = new List<SettingValue>();
+        public List<SettingValue> values = new List<SettingValue>();
 
         public void Add(string name, object value)
         {
@@ -40,7 +40,7 @@ namespace Uaine.IO
             {
                 if (values[i].Name == n)
                 {
-                    values[i].Value = value;
+                    values[i].NewDefaultAndSet(value);
                 }
             }
         }
