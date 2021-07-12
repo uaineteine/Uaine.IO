@@ -45,44 +45,67 @@ namespace Uaine.IO
             }
         }
 
-        public void SaveFile()
+        public bool SaveFile()
         {
-            using (FileStream fs = new FileStream(Filename, FileMode.Create))
+            try
             {
-                using (StreamWriter bw = new StreamWriter(fs))
+                using (FileStream fs = new FileStream(Filename, FileMode.Create))
                 {
-                    for (int i = 0; i < values.Count; i++)
-                    {
-                        bw.WriteLine(values[i].Value);
-                    }
-                    //EOF
-                    bw.Close();
-                }
-                fs.Close();
-            }
-        }
-
-        public void LoadFile()
-        {
-            if (File.Exists(Filename))
-            {
-                using (FileStream fs = new FileStream(Filename, FileMode.Open))
-                {
-                    using (StreamReader br = new StreamReader(fs))
+                    using (StreamWriter bw = new StreamWriter(fs))
                     {
                         for (int i = 0; i < values.Count; i++)
                         {
-                            values[i].ParseFromString(br.ReadLine());
+                            bw.WriteLine(values[i].Value);
                         }
                         //EOF
-                        br.Close();
+                        bw.Close();
                     }
                     fs.Close();
                 }
+                return true;
             }
-            else
+            catch
             {
-                SaveFile();
+                return false;
+            }
+        }
+
+        public bool LoadFile()
+        {
+            try
+            {
+                if (File.Exists(Filename))
+                {
+                    using (FileStream fs = new FileStream(Filename, FileMode.Open))
+                    {
+                        using (StreamReader br = new StreamReader(fs))
+                        {
+                            for (int i = 0; i < values.Count; i++)
+                            {
+                                try
+                                {
+                                    values[i].ParseFromString(br.ReadLine());
+                                }
+                                catch
+                                {
+                                    values[i] = new SettingValue(values[i].Name, values[i].def);
+                                }
+                            }
+                            //EOF
+                            br.Close();
+                        }
+                        fs.Close();
+                    }
+                }
+                else
+                {
+                    SaveFile();
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
             }
         }
     }
