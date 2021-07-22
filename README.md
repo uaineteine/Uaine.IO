@@ -6,7 +6,7 @@ A C# .NET standard project for IO and settings file operations
 
 Add source project to solution with reference to get started or install via [NuGet](https://www.nuget.org/packages/Uaine.IO/)
 
-## Version 0.1.4
+## Version 0.1.5
 
 See the [changelog](changelog.txt) for details.
 
