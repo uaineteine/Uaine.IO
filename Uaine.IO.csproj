@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>0.1.5</Version>
+    <Version>0.1.5.1</Version>
     <Authors>Daniel Stamer-Squair</Authors>
     <Copyright>Daniel Stamer-Squair 2021</Copyright>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
@@ -10,11 +10,13 @@
     <RepositoryUrl>https://github.com/uaineteine/Uaine.IO</RepositoryUrl>
     <PackageTags>settings file</PackageTags>
     <Description>A C# .NET standard project for IO and settings file operations</Description>
-    <AssemblyVersion>0.1.5.0</AssemblyVersion>
-    <FileVersion>0.1.5.0</FileVersion>
+    <AssemblyVersion>0.1.5.1</AssemblyVersion>
+    <FileVersion>0.1.5.1</FileVersion>
     <SignAssembly>false</SignAssembly>
-    <PackageIcon>icon.png</PackageIcon>
+    <PackageIcon>icon2.png</PackageIcon>
     <PackageIconUrl />
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,11 +24,7 @@
     <None Remove=".gitignore" />
     <None Remove="LICENSE" />
     <None Remove="README.md" />
-    <None Include="..\Uaine.Platforms\icon.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-    <None Include="icon.png">
+    <None Include="icon2.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
