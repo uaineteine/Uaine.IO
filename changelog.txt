@@ -1,3 +1,6 @@
+--0.1.5.2--
+creates directory for filepath if it doesn't exist
+
 --0.1.5.1--
 icon fix for package
 
