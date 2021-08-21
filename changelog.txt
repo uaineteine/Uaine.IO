@@ -1,3 +1,7 @@
+--0.1.6--
+MD5 Checksumming
+Uaine.Objects package dependency update
+
 --0.1.5.2--
 creates directory for filepath if it doesn't exist
 

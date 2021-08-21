@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Text;
+using Uaine.IO.Checksum;
 
 namespace Uaine.IO
 {
@@ -39,6 +40,11 @@ namespace Uaine.IO
         public void LoadAllLines()
         {
             Lines = File.ReadAllLines(Filename);
+        }
+
+        public checksum CheckSum(int checktype)
+        {
+            return Checksumming.checkFile(Filename, checktype);
         }
 
         public string Text()
