@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Uaine.IO.Checksum
+﻿namespace Uaine.IO.Checksum
 {
     public class checksum
     {
@@ -18,6 +14,14 @@ namespace Uaine.IO.Checksum
             this.type = type;
             this.hash = hash;
             this.checkstring = checkstring;
+        }
+
+        public static bool Equals(checksum lhs, checksum rhs)
+        {
+            if (lhs.type == rhs.type && lhs.hash == rhs.hash)
+                return true;
+            else
+                return false;
         }
     }
 }
