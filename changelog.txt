@@ -1,3 +1,6 @@
+--0.1.6.3--
+Uaine.Objects package updated to 1.10
+
 --0.1.6.2--
 Uaine.Objects package dependency update
 Added checksum equality function
