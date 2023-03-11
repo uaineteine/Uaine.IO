@@ -1,3 +1,7 @@
+--0.1.7--
+Uaine.Objects package updated to 1.11
+Uaine.Platforms package updated to 1.0.5
+
 --0.1.6.3--
 Uaine.Objects package updated to 1.10
 
