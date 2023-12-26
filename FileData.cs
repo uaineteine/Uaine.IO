@@ -42,9 +42,23 @@ namespace Uaine.IO
             Lines = File.ReadAllLines(Filename);
         }
 
-        public checksum CheckSum(int checktype)
+        public Checksum.Checksum CheckSum(int checktype)
         {
-            return Checksumming.checkFile(Filename, checktype);
+            byte[] fileData = File.ReadAllBytes(Filename);
+            byte[] checksum;
+            // Calculate checksum based on the chosen algorithm
+            if (checktype == ChecksumType.MD5)
+                    checksum =  Checksum.Checksum.CalculateMD5Checksum(fileData).HashBytes;
+            else if (checktype == ChecksumType.SHA256)
+                    checksum = Checksum.Checksum.CalculateSHA256Checksum(fileData).HashBytes;
+            else
+                    throw new ArgumentException("Invalid checksum algorithm specified");
+            return new Checksum.Checksum(checksum, checktype);
+        }
+        public Checksum.Checksum CheckSum()
+        {
+            //default sha256
+            return (CheckSum(ChecksumType.SHA256));
         }
 
         public string Text()

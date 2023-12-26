@@ -1,3 +1,8 @@
+--1.0--
+Uaine.Objects package updated to 2.0.1
+Uaine.Platforms package updated to 1.0.5
+Integrated checksum library
+
 --0.1.6.3--
 Uaine.Objects package updated to 1.10
 
