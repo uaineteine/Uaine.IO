@@ -2,16 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>1.0</Version>
+    <Version>1.1</Version>
     <Authors>Daniel Stamer-Squair</Authors>
-    <Copyright>Daniel Stamer-Squair 2023</Copyright>
+    <Copyright>Daniel Stamer-Squair 2024</Copyright>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/uaineteine/Uaine.IO</PackageProjectUrl>
     <RepositoryUrl>https://github.com/uaineteine/Uaine.IO</RepositoryUrl>
     <PackageTags>settings file</PackageTags>
     <Description>A C# .NET standard project for IO and settings file operations</Description>
-    <AssemblyVersion>1.0</AssemblyVersion>
-    <FileVersion>1.0</FileVersion>
+    <AssemblyVersion>1.1</AssemblyVersion>
+    <FileVersion>1.1</FileVersion>
     <SignAssembly>false</SignAssembly>
     <PackageIcon>icon2.png</PackageIcon>
     <PackageIconUrl />
