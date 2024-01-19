@@ -1,39 +1,14 @@
 # Uaine.IO
 
-A C# .NET standard project for managing collections of JSON file stores.
+A C# .NET standard project for IO and settings file operations
 
 ## Getting Started
 
-Add source project to solution with reference to get started or install via [NuGet](https://www.nuget.org/packages/Uaine.Archive/)
+Add source project to solution with reference to get started or install via [NuGet](https://www.nuget.org/packages/Uaine.IO/)
 
-## Version 0.1
+## Version 1.1
 
 See the [changelog](changelog.txt) for details.
-
-## Getting Started
-
-```bash
-dotnet add package Uaine.Archive
-```
-
-```csharp
-using Uaine.Archive;
-
-// Create an archive
-var archive = new Archive<int>("MyIntCollection");
-
-// Create file stores
-var fileStore1 = new JsonFileStore<int>("file1.json", "data1", new int[] { 1, 2, 3 });
-var fileStore2 = new JsonFileStore<int>("file2.json", "data2", new int[] { 4, 5, 6 });
-
-// Add file stores to the archive
-archive.AddFileStore(fileStore1);
-archive.AddFileStore(fileStore2);
-
-// Load files by index or data name
-var loadedFileByIndex = archive.LoadFileByIndex(0);
-var loadedFileByDataName = archive.LoadFileByDataName("data2");
-```
 
 ## Authors
 
